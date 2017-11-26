@@ -1,18 +1,19 @@
 package ir.resturent.cashier;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import ir.resturent.food.Food;
 
 public class Order {
 
-	ArrayList<Food> orders = new ArrayList<>();
+	HashMap<String, Integer> orders = new HashMap<>();
 	String date;
 	int time;
-	String customerNumber;
+	int customerNumber;
 	double price;
 	
-	public Order(ArrayList<Food> orders, String date, int time, String customerNumber,double price) {
+	public Order(HashMap<String, Integer> orders, String date, int time, int customerNumber,double price) {
 		super();
 		this.orders = orders;
 		this.date = date;
@@ -21,6 +22,9 @@ public class Order {
 		this.price = price;
 	}
 
+	public Order() {
+		
+	}
 
 	public double getPrice() {
 		return price;
@@ -32,12 +36,12 @@ public class Order {
 	}
 
 
-	public ArrayList<Food> getOrders() {
+	public HashMap<String, Integer> getOrders() {
 		return orders;
 	}
 
 
-	public void setOrders(ArrayList<Food> orders) {
+	public void setOrders(HashMap<String, Integer> orders) {
 		this.orders = orders;
 	}
 
@@ -62,12 +66,12 @@ public class Order {
 	}
 
 
-	public String getCustomerNumber() {
+	public int getCustomerNumber() {
 		return customerNumber;
 	}
 
 
-	public void setCustomerNumber(String customerNumber) {
+	public void setCustomerNumber(int customerNumber) {
 		this.customerNumber = customerNumber;
 	}
 	
